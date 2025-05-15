@@ -26,11 +26,11 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 ### Block diagram
 
 <!-- Make sure the path to the picture is correct -->
-![Block Diagram]()
+![Block Diagram](https://github.com/user-attachments/assets/c7486f10-9e1a-47be-84e3-56295f277f59)
 
 ### Schematic
 
-![Schematic](schematics/kicad_schematic.png)
+![Schematic](https://github.com/user-attachments/assets/891383ff-42bf-4efc-8e21-c54177d0c096)
 
 ### Components
 
