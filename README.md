@@ -6,11 +6,11 @@
 |`Author` | Barbier Ileana Geneviève & Brișan Andrei-Sebastian 
 
 ## Description
- ## Purpose:
+ ### Purpose:
 
 Development of a hardware-software system based on a microprocessor (ESP32 + extensions) that functions as a universal IoT gateway, capable of interconnecting and translating between various protocols: Matter, Zigbee, Z-Wave, BLE, Wi-Fi, Thread, etc.
 
-## Objectives:
+### Objectives:
 1. Design of a modular microprocessor/microcontroller architecture with support for protocol extension modules.
 2. Hardware integration of modules: Zigbee (e.g., CC2652), Z-Wave (ZGM130S), Wi-Fi/BLE (ESP32), Thread (nRF52840).
 3. Implementation of a software interface that:
@@ -20,6 +20,7 @@ Detects IoT devices in the network regardless of protocol, displays them in a we
 
 ## Motivation
 The smart home ecosystem suffers from fragmentation due to multiple communication standards (Zigbee, Z-Wave, BLE, Thread, etc.), which limits interoperability between devices. This project aims to create a single hardware hub capable of bridging these technologies through a unified interface, enabling seamless integration and smarter automation scenarios.
+
 ## Architecture
 
 ### Block diagram
@@ -59,9 +60,12 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+1. Finalized the component list and began sourcing hardware.
+2. Planned project architecture and started block diagram design.
 
 ### Week 7 - 19 May
+1. Initial testing of ESP32 dev board and Wi-Fi web server setup.
+2. Breadboard layout and wiring test for ESP32 and nRF52840.
 
 ### Week 20 - 26 May
 
