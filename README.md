@@ -53,8 +53,11 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [lib-name1](link-to-lib) | official description of the lib | Used for accesing the peripherals of the microcontroller  |
-| [lib-name2](link-to-lib) | official description of the lib | Used for accesing the peripherals of the microcontroller  |
+| [libCoAP](https://github.com/obgm/libcoap) | A CoAP (RFC 7252) implementation in C | Used in ESP-IDF on ESP32 to implement a CoAP server for communication with Thread/BLE devices (e.g., nRF52840)  |
+| [ESP-IDF](https://github.com/espressif/esp-idf) | Espressif IoT Development Framework. Official development framework for Espressif SoCs. | Provides hardware abstraction, drivers, FreeRTOS, and networking support including Wi-Fi  |
+| [OpenThread](https://github.com/openthread/openthread) | OpenThread released by Google is an open-source implementation of the Thread networking protocol | Enables Thread protocol support on the nRF52840  |
+
+
 
 ## Log
 
@@ -75,8 +78,8 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 
 <!-- Fill in with appropriate links and link titles -->
 
-[Tutorial 1](https://www.youtube.com/watch?v=wdgULBpRoXk&t=1s&ab_channel=BenEater)
+[Matter over Thread with nRF52840](https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/protocols/matter/index.html)
 
-[Article 1](https://www.explainthatstuff.com/induction-motors.html)
+[OpenThread by Google](https://openthread.io)
 
-[Link title](https://projecthub.arduino.cc/)
+[UART, SPI, I2C Protocol basics](https://learn.sparkfun.com/tutorials/serial-communication/all)
