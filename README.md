@@ -26,11 +26,11 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 ### Block diagram
 
 <!-- Make sure the path to the picture is correct -->
-![Block Diagram](https://github.com/user-attachments/assets/c7486f10-9e1a-47be-84e3-56295f277f59)
+![Block Diagram](https://github.com/user-attachments/assets/8cd24071-292e-4331-8f5c-5a35147cda7c)
 
 ### Schematic
 
-![Schematic](https://github.com/user-attachments/assets/891383ff-42bf-4efc-8e21-c54177d0c096)
+![Schematic](https://github.com/user-attachments/assets/bb103c5d-e36a-4fa5-b51f-d41bafd511e8)
 
 ### Components
 
@@ -39,12 +39,13 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 
 | Device | Usage | Price |
 |--------|--------|-------|
-| ESP32-WROOM32 | Development board | [69,99 RON](https://www.optimusdigital.ro/en/wifi-boards/3053-placa-de-dezvoltare-esp32-cu-wifi-si-bluetooth.html?search_query=esp32&results=39) |
+| ESP32-WROOM32D | Development board | [69,99 RON](https://www.optimusdigital.ro/en/wifi-boards/3053-placa-de-dezvoltare-esp32-cu-wifi-si-bluetooth.html?search_query=esp32&results=39) |
 | Breadboard 750 points + 300 points + 300 points | Project boards | [8,98 RON](https://www.optimusdigital.ro/en/breadboards/13245-breadboard-750-points.html?search_query=breadboard&results=361) and 2 * [3,49RON](https://www.optimusdigital.ro/en/breadboards/13249-breadboard-300-puncte.html?search_query=breadboard&results=361)|
 | Female-Female Wires| Connecting components | [6,99 RON](https://www.optimusdigital.ro/en/wires-with-connectors/652-10-cm-40p-female-female-wire.html?search_query=male+male&results=806&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fen%2Fsearch%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dmale%2Bmale%26submit_search%3D) |
 | Male-Female Wires| Connecting components | [5,99 RON](https://www.optimusdigital.ro/en/wires-with-connectors/653-10-cm-40p-male-to-female-wire.html?search_query=male+male+40p&results=38) |
 | Male-Male Wires| Connecting components | [7,98 RON](https://www.optimusdigital.ro/en/wires-with-connectors/890-set-fire-tata-tata-40p-30-cm.html?search_query=male+male+40p&results=38) |
-| SparkFun Pro nRF52840| Thread/BLE | [229,14 RON](https://www.robofun.ro/wireless/placa-de-dezvoltare-sparkfun-pro-nrf52840-mini-cu-bluetooth.html) |
+| 2 Pitch Male Pin Header| Soldering on nRF52840 | [1,98 RON](https://www.optimusdigital.ro/en/pin-headers/464-colored-40p-254-mm-pitch-male-pin-header-red.html?search_query=Colored+40p+2.54+mm+Pitch+Male+Pin+Header+-+Red&results=4) |
+| SparkFun Pro nRF52840| Thread/BLE/Matter| [229,14 RON](https://www.robofun.ro/wireless/placa-de-dezvoltare-sparkfun-pro-nrf52840-mini-cu-bluetooth.html) |
 
 ### Libraries
 
