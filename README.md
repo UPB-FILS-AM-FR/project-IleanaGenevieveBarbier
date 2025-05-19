@@ -57,7 +57,7 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 | [ESP-IDF](https://github.com/espressif/esp-idf) | Espressif IoT Development Framework. Official development framework for Espressif SoCs. | Provides hardware abstraction, drivers, FreeRTOS, and networking support including Wi-Fi  |
 | [OpenThread](https://github.com/openthread/openthread) | OpenThread released by Google is an open-source implementation of the Thread networking protocol | Enables Thread protocol support on the nRF52840  |
 
-
+### Software
 
 ## Log
 
@@ -70,6 +70,7 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 ### Week 7 - 19 May
 1. Initial testing of ESP32 dev board and Wi-Fi web server setup.
 2. Breadboard layout and wiring test for ESP32 and nRF52840.
+3. Started the software part for ESP32 and partially for nRF52840.
 
 ### Week 20 - 26 May
 
