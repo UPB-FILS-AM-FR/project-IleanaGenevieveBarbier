@@ -8,14 +8,14 @@
 ## Description
  ### Purpose:
 
-Development of a hardware-software system based on a microprocessor (ESP32 + extensions) that functions as a universal IoT gateway, capable of interconnecting and translating between various protocols: Matter, Zigbee, Z-Wave, BLE, Wi-Fi, Thread, etc.
+Development of a hardware-software system based on a microprocessor (ESP32-WROOM32D + nRF52840) that functions as a universal IoT gateway, capable of interconnecting and translating between various protocols: Matter, Zigbee, Z-Wave, BLE, Wi-Fi, Thread, etc.
 
 ### Objectives:
 1. Design of a modular microprocessor/microcontroller architecture with support for protocol extension modules.
-2. Hardware integration of modules: Zigbee (e.g., CC2652), Z-Wave (ZGM130S), Wi-Fi/BLE (ESP32), Thread (nRF52840).
+2. Hardware integration of modules:  Wi-Fi/BLE (ESP32-WROOM32D), Thread/Matter (nRF52840), Zigbee (e.g., CC2652), Z-Wave (ZGM130S).
 3. Implementation of a software interface that:
 Detects IoT devices in the network regardless of protocol, displays them in a web dashboard (hosted on the ESP), allows the creation of automation scenarios between devices across different protocols.
-5. Development of a real-time monitoring WebUI or mobile app.
+5. Development of a real-time monitoring WebUI.
 
 
 ## Motivation
@@ -58,6 +58,7 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 | [OpenThread](https://github.com/openthread/openthread) | OpenThread released by Google is an open-source implementation of the Thread networking protocol | Enables Thread protocol support on the nRF52840  |
 
 ### Software
+(we will write this section when we'll finish all the coding)
 
 ## Log
 
