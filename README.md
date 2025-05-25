@@ -3,7 +3,7 @@
 
 | | |
 |-|-|
-|`Author` | Barbier Ileana Geneviève & Brișan Andrei-Sebastian 
+|`Author` | BARBIER Ileana Geneviève & BRIȘAN Andrei-Sebastian 
 
 ## Description
  ### Purpose:
