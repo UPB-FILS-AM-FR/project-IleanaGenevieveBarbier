@@ -160,7 +160,7 @@ NRFUTIL := /Users/asbri/Library/Python/3.13/bin/adafruit-nrfutil
 SDK_ROOT := /Users/asbri/Downloads/DeviceDownload/nRF5_SDK_17.1.0_ddde560
 PROJ_DIR := ../../..
 ```
-5. At the bottom of the file added:
+5. Added at the bottom of the file :
 ```
 dfu-package: $(OUTPUT_DIRECTORY)/nrf52840_xxaa.hex
 @echo Packaging $<
