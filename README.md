@@ -58,7 +58,129 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 | [OpenThread](https://github.com/openthread/openthread) | OpenThread released by Google is an open-source implementation of the Thread networking protocol | Enables Thread protocol support on the nRF52840  |
 
 ### Software
-(we will write this section when we'll finish all the coding)
+SparkFun Pro nRF52840 Mini:
+#### - GNU C/C++ Compiler (gcc-arm-none-eabi-10.3-2021.10-mac.tar.bz2) 
+1. Downloaded into an accessible folder(ex. Downloads)
+2. Unarchived and moved to /opt/arm-gcc
+3. Provided high level permissions to the folder using % sudo xattr -rd com.apple.quarantine /opt/arm-gcc
+#### - Command line tools and DFU Bootloader tools
+1. nRF5x Command Line Tools for Mac, version 10.24.2, [nrf-command-line-tools-10.24.2-Darwin.dmg](nrf-command-line-tools-10.24.2-Darwin.dmg)
+2. Installed adafruit-nrfutil-0.5.3 (pip3 install --user adafruit-nrfutil)
+- Setting up the nRF5 SDK
+1. Downloaded the Nordic's latest nRF5 SDK and extracted it to an accessible folder (ex. Downloads)
+2. Modified the components/toolchains/gcc/Makefile.posix with the appropriate values: \
+  `GNU_INSTALL_ROOT := /opt/arm-gcc/bin/` \
+   `GNU_PREFIX := arm-none-eabi` \
+   `GNU_VERSION := 10.3.1 `
+3. Edited the board file [sparkfun_nrf52840_mini.h](https://github.com/sparkfun/nRF52840_Breakout_MDBT50Q/blob/master/Firmware/nRF5_SDK/components/boards/sparkfun_nrf52840_mini.h)
+4. Placed that file in the components/boards directory
+5. Modified components/boards/boards.h, adding the following before #elif defined(BOARD_CUSTOM): \
+`#elif defined (BOARD_SPARKFUN_NRF52840_MINI)` \
+`#include "sparkfun_nrf52840_mini.h"`
+#### - Setting Up a VS Code Environment
+1. Opened a Sample Folder in VS Code
+2. In the explorer-prompt that opened, we navigated to the nRF5 SDK, then found examples/peripheral/blinky
+3. Set Up c_cpp_properties.json \ editing configurations in main.c
+```
+{
+    "env": {
+        "nrfSDK": "C:\\nRF5\\nRF5_SDK_15.2.0_9412b96"
+    },
+
+    "configurations": [
+        {
+            "name": "ARMGCC",
+            "includePath": [
+                "${workspaceFolder}/",
+                "${nrfSDK}/components/",
+                "${nrfSDK}/components",
+                "${nrfSDK}/components/libraries/experimental_memobj",
+                "${nrfSDK}/components/libraries/experimental_section_vars",
+                "${nrfSDK}/modules/nrfx/mdk",
+                "${nrfSDK}/modules/nrfx/hal",
+                "${nrfSDK}/components/libraries/balloc",
+                "${nrfSDK}/components/libraries/experimental_log",
+                "${nrfSDK}/components/libraries/experimental_log/src",
+                "${nrfSDK}/components/libraries/delay",
+                "${nrfSDK}/integration/nrfx",
+                "${nrfSDK}/components/libraries/bsp",
+                "${nrfSDK}/components/drivers_nrf/nrf_soc_nosd",
+                "${nrfSDK}/components/libraries/strerror",
+                "${nrfSDK}/components/boards",
+                "${nrfSDK}/components/toolchain/cmsis/include",
+                "${nrfSDK}/modules/nrfx",
+                "${nrfSDK}/components/libraries/util",
+                "${nrfSDK}/components/libraries/fifo",
+                "${nrfSDK}/components/libraries/uart",
+                "${nrfSDK}/integration/nrfx/legacy",
+                "${nrfSDK}/components/libraries/delay",
+                "${nrfSDK}/modules/nrfx/drivers/include",
+                "${workspaceFolder}/sparkfun/blank/config",
+                "${workspaceFolder}/sparkfun/blank"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "BOARD_SPARKFUN_NRF52840_MINI",
+                "BSP_DEFINES_ONLY",
+                "CONFIG_GPIO_AS_PINRESET",
+                "FLOAT_ABI_HARD",
+                "NRF52840_XXAA",
+                "DCONFIG_NFCT_PINS_AS_GPIOS"
+            ],
+            "compilerPath": "C:\\Program Files (x86)\\GNU Tools ARM Embedded\\7 2018-q2-update\\bin\\arm-none-eabi-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
+```
+#### - Building Blinky for the SparkFun nRF52840 Mini
+1. Copied and duplicated the pca10056 folder and renamed it to sparkfun_nrf52840_mini
+2. Modified the board definitions (CFLAGS and ASMFLAGS definitions for -DBOARD_PCA10056) to -DBOARD_SPARKFUN_NRF52840_MINI:
+3. Added DFU-Programming Targets
+```
+dfu-package: $(OUTPUT_DIRECTORY)/nrf52840_xxaa.hex
+@echo Packaging $<
+adafruit-nrfutil dfu genpkg --sd-req 0xFFFE --dev-type 0x0052 --application $<  _build/dfu-package.zip
+
+bootload: $(OUTPUT_DIRECTORY)/nrf52840_xxaa.hex dfu-package
+@echo Flashing: $<
+adafruit-nrfutil --verbose dfu serial --package _build/dfu-package.zip -p $(SERIAL_PORT) -b 115200 --singlebank --touch 1200
+```
+4. Modified the header of Makefile as:
+```
+PROJECT_NAME     := blinky_pca10056
+TARGETS          := nrf52840_xxaa
+OUTPUT_DIRECTORY := _build
+NRFUTIL := /Users/asbri/Library/Python/3.13/bin/adafruit-nrfutil
+SDK_ROOT := /Users/asbri/Downloads/DeviceDownload/nRF5_SDK_17.1.0_ddde560
+PROJ_DIR := ../../..
+```
+5. At the bottom of the file added:
+```
+dfu-package: $(OUTPUT_DIRECTORY)/nrf52840_xxaa.hex
+@echo Packaging $<
+$(NRFUTIL) dfu genpkg --sd-req 0xFFFE --dev-type 0x0052 --application $<  _build/dfu-package.zip
+
+bootload: $(OUTPUT_DIRECTORY)/nrf52840_xxaa.hex dfu-package
+@echo Flashing: $<
+$(NRFUTIL) --verbose dfu serial --package _build/dfu-package.zip -p $(SERIAL_PORT) -b 115200 --singlebank --touch 1200
+```
+#### - Revising the Linker Script's Memory Organization
+1. Opened blinky_gcc_nrf52.ld and replaced the MEMORY section of the linker script with the below memory origin/length combinations:
+```
+MEMORY
+{
+  FLASH (rx) : ORIGIN = 0x26000, LENGTH = 0xce000
+  RAM (rwx) :  ORIGIN = 0x20000000, LENGTH = 0x40000
+}
+```
+2. Build and program in one swift command: \
+`make bootload SERIAL_PORT=/dev/cu.usbmodem1101`
 
 ## Log
 
