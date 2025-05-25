@@ -64,7 +64,7 @@ SparkFun Pro nRF52840 Mini:
 2. Unarchived and moved to /opt/arm-gcc
 3. Provided high level permissions to the folder using % sudo xattr -rd com.apple.quarantine /opt/arm-gcc
 #### - Command line tools and DFU Bootloader tools
-1. nRF5x Command Line Tools for Mac, version 10.24.2, [nrf-command-line-tools-10.24.2-Darwin.dmg](nrf-command-line-tools-10.24.2-Darwin.dmg)
+1. nRF5x Command Line Tools for Mac, version 10.24.2, nrf-command-line-tools-10.24.2-Darwin.dmg
 2. Installed adafruit-nrfutil-0.5.3 (pip3 install --user adafruit-nrfutil)
 - Setting up the nRF5 SDK
 1. Downloaded the Nordic's latest nRF5 SDK and extracted it to an accessible folder (ex. Downloads)
