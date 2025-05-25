@@ -53,7 +53,7 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [libCoAP](https://github.com/obgm/libcoap) | A CoAP (RFC 7252) implementation in C | Used in ESP-IDF on ESP32 to implement a CoAP server for communication with Thread/BLE devices (e.g., nRF52840)  |
+| [libCoAP](https://github.com/obgm/libcoap) | A CoAP (RFC 7252) implementation in C | Used in ESP-IDF on ESP32-WROOM32D  to implement a CoAP server for communication with Thread/BLE devices (e.g., nRF52840)  |
 | [ESP-IDF](https://github.com/espressif/esp-idf) | Espressif IoT Development Framework. Official development framework for Espressif SoCs. | Provides hardware abstraction, drivers, FreeRTOS, and networking support including Wi-Fi  |
 | [OpenThread](https://github.com/openthread/openthread) | OpenThread released by Google is an open-source implementation of the Thread networking protocol | Enables Thread protocol support on the nRF52840  |
 
@@ -187,15 +187,16 @@ MEMORY
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-1. Finalized the component list and began sourcing hardware.
-2. Planned project architecture and started block diagram design.
+1. Finalized the component list and began sourcing hardware
+2. Planned project architecture and started block diagram design
 
 ### Week 7 - 19 May
-1. Initial testing of ESP32 dev board and Wi-Fi web server setup.
-2. Breadboard layout and wiring test for ESP32 and nRF52840.
-3. Started the software part for ESP32 and partially for nRF52840.
+1. Initial testing of ESP32-WROOM32D  dev board and Wi-Fi web server setup
+2. Breadboard layout and wiring test for ESP32 and nRF52840
+3. Started the software part for ESP32-WROOM32D and partially for nRF52840
 
 ### Week 20 - 26 May
+1. Finalized the software part for both ESP32-WROOM32D and Sparkfun Pro nRF52840 mini
 
 
 ## Reference links
