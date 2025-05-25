@@ -202,10 +202,11 @@ MEMORY
 ## Reference links
 
 <!-- Fill in with appropriate links and link titles -->
+[UART, SPI, I2C Protocol basics](https://learn.sparkfun.com/tutorials/serial-communication/all)
+
 [SparkFun nRF52840 Tutorial](https://learn.sparkfun.com/tutorials/sparkfun-pro-nrf52840-mini-hookup-guide/introduction)
 
 [Matter over Thread with nRF52840](https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/protocols/matter/index.html)
 
 [OpenThread by Google](https://openthread.io)
 
-[UART, SPI, I2C Protocol basics](https://learn.sparkfun.com/tutorials/serial-communication/all)
