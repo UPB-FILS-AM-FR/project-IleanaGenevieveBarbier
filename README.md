@@ -42,11 +42,11 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 | Device | Usage | Price |
 |--------|--------|-------|
 | ESP32-WROOM32D | Development board | [69,99 RON](https://www.optimusdigital.ro/en/wifi-boards/3053-placa-de-dezvoltare-esp32-cu-wifi-si-bluetooth.html?search_query=esp32&results=39) |
-| Breadboard 750 points + 300 points + 300 points | Project boards | [8,98 RON](https://www.optimusdigital.ro/en/breadboards/13245-breadboard-750-points.html?search_query=breadboard&results=361) and 2 * [3,49RON](https://www.optimusdigital.ro/en/breadboards/13249-breadboard-300-puncte.html?search_query=breadboard&results=361)|
+| Breadboard 300 points + 300 points | Project boards | 2 * [3,49RON](https://www.optimusdigital.ro/en/breadboards/13249-breadboard-300-puncte.html?search_query=breadboard&results=361)|
 | Female-Female Wires| Connecting components | [6,99 RON](https://www.optimusdigital.ro/en/wires-with-connectors/652-10-cm-40p-female-female-wire.html?search_query=male+male&results=806&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fen%2Fsearch%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dmale%2Bmale%26submit_search%3D) |
 | Male-Female Wires| Connecting components | [5,99 RON](https://www.optimusdigital.ro/en/wires-with-connectors/653-10-cm-40p-male-to-female-wire.html?search_query=male+male+40p&results=38) |
 | Male-Male Wires| Connecting components | [7,98 RON](https://www.optimusdigital.ro/en/wires-with-connectors/890-set-fire-tata-tata-40p-30-cm.html?search_query=male+male+40p&results=38) |
-| 2 Pitch Male Pin Header| Soldering on nRF52840 | [1,98 RON](https://www.optimusdigital.ro/en/pin-headers/464-colored-40p-254-mm-pitch-male-pin-header-red.html?search_query=Colored+40p+2.54+mm+Pitch+Male+Pin+Header+-+Red&results=4) |
+| 2 Pitch Male Pin Headers| Soldering on nRF52840 | [1,98 RON](https://www.optimusdigital.ro/en/pin-headers/464-colored-40p-254-mm-pitch-male-pin-header-red.html?search_query=Colored+40p+2.54+mm+Pitch+Male+Pin+Header+-+Red&results=4) |
 | SparkFun Pro nRF52840| Thread/BLE/Matter| [229,14 RON](https://www.robofun.ro/wireless/placa-de-dezvoltare-sparkfun-pro-nrf52840-mini-cu-bluetooth.html) |
 
 ### Libraries
@@ -55,7 +55,7 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [libCoAP](https://github.com/obgm/libcoap) | A CoAP (RFC 7252) implementation in C | Used in ESP-IDF on ESP32-WROOM32D  to implement a CoAP server for communication with Thread/BLE devices (e.g., nRF52840)  |
+| [libCoAP](https://github.com/obgm/libcoap) | A CoAP (RFC 7252) implementation in C | Used in ESP-IDF on ESP32-WROOM32D  to implement a CoAP server for communication with Thread/BLE devices ( nRF52840)  |
 | [ESP-IDF](https://github.com/espressif/esp-idf) | Espressif IoT Development Framework. Official development framework for Espressif SoCs. | Provides hardware abstraction, drivers, FreeRTOS, and networking support including Wi-Fi  |
 | [OpenThread](https://github.com/openthread/openthread) | OpenThread released by Google is an open-source implementation of the Thread networking protocol | Enables Thread protocol support on the nRF52840  |
 
