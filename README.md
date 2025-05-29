@@ -60,6 +60,8 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 | [OpenThread](https://github.com/openthread/openthread) | OpenThread released by Google is an open-source implementation of the Thread networking protocol | Enables Thread protocol support on the nRF52840  |
 
 ### Software
+ESP32-WROOM32D:
+#### ESP-IDF extension in Visual Studio Code
 SparkFun Pro nRF52840 Mini:
 #### - GNU C/C++ Compiler (gcc-arm-none-eabi-10.3-2021.10-mac.tar.bz2) 
 1. Downloaded into an accessible folder(ex. Downloads)
