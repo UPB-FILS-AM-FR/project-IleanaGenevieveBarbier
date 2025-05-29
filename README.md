@@ -8,7 +8,7 @@
 ## Description
  ### Purpose:
 
-Development of a hardware-software system based on a microprocessor (ESP32-WROOM32D + nRF52840) that functions as a universal IoT gateway, capable of interconnecting and translating between various protocols: Matter, Zigbee, Z-Wave, BLE, Wi-Fi, Thread, etc.
+Development of a hardware-software system based on two microprocessors (ESP32-WROOM32D + SparkFun Pro nRF52840 mini) that functions as a universal IoT gateway, capable of interconnecting and translating between various protocols: Matter, Zigbee, Z-Wave, BLE, Wi-Fi, Thread, etc.
 
 ### Objectives:
 1. Design of a modular microprocessor/microcontroller architecture with support for protocol extension modules.
@@ -26,11 +26,13 @@ The smart home ecosystem suffers from fragmentation due to multiple communicatio
 ### Block diagram
 
 <!-- Make sure the path to the picture is correct -->
-![Block Diagram](https://github.com/user-attachments/assets/8cd24071-292e-4331-8f5c-5a35147cda7c)
+![Block Diagram](https://github.com/user-attachments/assets/df5a79a8-5ef0-4c6e-b556-020f0129d42c)
+)
 
 ### Schematic
 
-![Schematic](https://github.com/user-attachments/assets/bb103c5d-e36a-4fa5-b51f-d41bafd511e8)
+![Schematic](https://github.com/user-attachments/assets/3c3bc166-1eec-4644-9cd8-4a8fca808c11)
+)
 
 ### Components
 
